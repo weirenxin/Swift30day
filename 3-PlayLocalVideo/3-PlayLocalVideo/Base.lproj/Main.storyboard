@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ABn-En-Xm5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Watch Later-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__PlayLocalVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BVs-Oc-Cji">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.035294117649999998" green="0.0078431372550000003" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="PFM-7c-595" customClass="VideoCell" customModule="__PlayLocalVideo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PFM-7c-595" id="qWt-pk-DrM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoScreenshot01" translatesAutoresizingMaskIntoConstraints="NO" id="Mra-Ip-j4U">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHp-bb-8aD">
+                                                    <rect key="frame" x="87.5" y="59" width="200" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="200" id="21S-O8-MdS"/>
+                                                        <constraint firstAttribute="height" constant="100" id="qbp-NJ-0CP"/>
+                                                    </constraints>
+                                                    <state key="normal" image="playBtn"/>
+                                                    <connections>
+                                                        <action selector="playVideoButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2kf-HL-rja"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emoji Among Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQt-rk-Dot">
+                                                    <rect key="frame" x="128" y="169" width="119" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube-06:32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fa1-hr-IWI">
+                                                    <rect key="frame" x="147.5" y="192" width="79.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vHp-bb-8aD" firstAttribute="centerY" secondItem="qWt-pk-DrM" secondAttribute="centerY" id="12Z-4W-zeU"/>
+                                                <constraint firstItem="wQt-rk-Dot" firstAttribute="centerX" secondItem="vHp-bb-8aD" secondAttribute="centerX" id="73x-zW-Led"/>
+                                                <constraint firstItem="vHp-bb-8aD" firstAttribute="centerX" secondItem="qWt-pk-DrM" secondAttribute="centerX" id="Eri-8y-Kvu"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mra-Ip-j4U" secondAttribute="bottom" id="HKx-Jk-BoV"/>
+                                                <constraint firstItem="Mra-Ip-j4U" firstAttribute="leading" secondItem="qWt-pk-DrM" secondAttribute="leading" id="REH-zv-FLG"/>
+                                                <constraint firstItem="Mra-Ip-j4U" firstAttribute="top" secondItem="qWt-pk-DrM" secondAttribute="top" id="TNI-pq-9cu"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mra-Ip-j4U" secondAttribute="trailing" id="cdf-Cy-OLm"/>
+                                                <constraint firstItem="wQt-rk-Dot" firstAttribute="top" secondItem="vHp-bb-8aD" secondAttribute="bottom" constant="10" id="czj-oR-9bs"/>
+                                                <constraint firstItem="Fa1-hr-IWI" firstAttribute="centerX" secondItem="wQt-rk-Dot" secondAttribute="centerX" id="pLY-sH-7Sb"/>
+                                                <constraint firstItem="Fa1-hr-IWI" firstAttribute="top" secondItem="wQt-rk-Dot" secondAttribute="bottom" constant="5" id="qEb-Lw-BPr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="screenshot" destination="Mra-Ip-j4U" id="PKV-IJ-Mfd"/>
+                                            <outlet property="sourceLabel" destination="Fa1-hr-IWI" id="hSo-VF-kUU"/>
+                                            <outlet property="titleLabel" destination="wQt-rk-Dot" id="fYG-y5-dO2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="An9-xT-JcO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="W8Z-nU-0WY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.035294117649999998" green="0.0078431372550000003" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BVs-Oc-Cji" secondAttribute="trailing" id="2On-ZK-c07"/>
+                            <constraint firstItem="BVs-Oc-Cji" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FYS-Tf-8ak"/>
+                            <constraint firstItem="BVs-Oc-Cji" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lrb-Pa-FmO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BVs-Oc-Cji" secondAttribute="bottom" id="eex-9b-nzf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Watch Later" id="27m-fC-ScN"/>
+                    <connections>
+                        <outlet property="tableView" destination="BVs-Oc-Cji" id="oqk-V9-Ygl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rLY-fF-aby">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ABn-En-Xm5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="wfr-Dj-3Iz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l5y-U3-eDz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ht-BW-Cgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="791.15442278860576"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playBtn" width="60" height="60"/>
+        <image name="videoScreenshot01" width="375" height="220"/>
+    </resources>
+</document>
